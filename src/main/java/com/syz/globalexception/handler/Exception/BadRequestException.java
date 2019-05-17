@@ -18,6 +18,7 @@ public class BadRequestException extends HystrixBadRequestException {
     }
 
     public BadRequestException(String errorKey) {
+
         this(PropertiesUtil.getErrCode(errorKey), PropertiesUtil.getErrMsg(errorKey));
     }
 

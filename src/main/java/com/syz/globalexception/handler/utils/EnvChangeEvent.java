@@ -1,6 +1,7 @@
 package com.syz.globalexception.handler.utils;
 
 import org.springframework.context.ApplicationEvent;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 

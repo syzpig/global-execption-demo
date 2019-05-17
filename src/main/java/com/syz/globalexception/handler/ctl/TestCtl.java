@@ -1,5 +1,6 @@
 package com.syz.globalexception.handler.ctl;
 
+import com.syz.globalexception.handler.Exception.BadRequestException;
 import com.syz.globalexception.handler.Exception.MyCustomException;
 import com.syz.globalexception.handler.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,10 @@ public class TestCtl {
 
     @Autowired
     private TestService testService;
+
     @GetMapping("add")
-    public void add(){
-        throw new MyCustomException(11, "服务异常！");
-          //testService.add();
+    public void add() {
+        throw new BadRequestException("error.invalidParameters");
+        //testService.add();
     }
 }
